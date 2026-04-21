@@ -1,1 +1,27 @@
+class student{
+    private int emis;
+    private int id;
+    public String name;
+    public String standard;
+    
+    student(int emis, int id, String name, String standard){
+        this.emis = emis;
+        this.id = id;
+        this.name = name;
+        this.standard = standard;
+        }
+        public int getemis(){
+            return emis;
+        }
+        public int getid(){
+            return id;
+        }
+}
 
+public class Main{
+    public static void main(String[] args){
+        student stu = new student(1234, 1, "Apple", "X");
+        System.out.println("The emis id: "+stu.getemis()+" \nId: "+stu.getid()+
+        "\nName of the student: "+stu.name+"\nStandard studying: "+stu.standard);
+}
+}
