@@ -1,0 +1,52 @@
+class employee {
+	private int in_id;
+	private String mobile;
+	private String address;
+	public String name;
+	public int emp_id;
+
+	employee(int in_id, String mobile, String address, int emp_id, String name) {
+		this.in_id = in_id;
+		this.mobile = mobile;
+		this.address =address;
+		this.emp_id = emp_id;
+		this.name = name;
+	}
+	public void setin_id(int iid) {
+		this.in_id = iid;
+	}
+	public void setmobile(String mob) {
+		this.mobile = mob;
+	}
+	public void setaddress(String add) {
+		this.address = add;
+	}
+
+	public int getin_id() {
+		return this.in_id;
+	}
+	public String getmobile() {
+		return this.mobile;
+	}
+	public String getaddress() {
+		return this.address;
+	}
+	public String getname() {
+		return this.name;
+	}
+	public int getemp_id() {
+		return this.emp_id;
+	}
+}
+public class Main{
+    public static void main(String[] args){
+        employee emp = new employee(202601, "+91 9856231478", "Chennai", 1001, "Harry Potter");
+        int past_in_id = emp.getin_id();
+        emp.setin_id(202602);
+        System.out.println("The past internal id of the employee is: "+past_in_id);
+        System.out.println("The updated internal id of the employee is: "+emp.getin_id());
+        System.out.println("The internal id of the employee: "+emp.getin_id()+" \nMobile no: "
+                            +emp.getmobile()+" \nResiding Address of the employee: "+emp.getaddress()
+                            +" \nEmployee id: "+emp.getemp_id()+" \nName of the employee: "+emp.getname());
+    }
+}
