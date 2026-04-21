@@ -1,0 +1,68 @@
+class person {
+	private int id;
+	public String first_name;
+	public String last_name;
+
+	person(int id, String first_name, String last_name) {
+		this.id = id;
+		this.first_name = first_name;
+		this.last_name = last_name;
+	}
+	public int getid() {
+		return id;
+	}
+	void callname() {
+		System.out.println(this.first_name+" "+this.last_name);
+	}
+
+}
+
+class student extends person {
+	public int rollno;
+
+	student(int id,int rollno, String first_name, String last_name) {
+		super(id, first_name, last_name);
+		this.rollno = rollno;
+	}
+	
+	public int getid() {
+		return super.getid();
+
+	}
+}
+
+class employee extends person{
+    int empid;
+    int salary;
+    
+    employee(int id, String first_name, String last_name, int empid, int salary){
+        super(id, first_name, last_name);
+        this.empid = empid;
+        this.salary = salary;
+    }
+    public int getid(){
+        return super.getid();
+    }
+}
+
+public class Main {
+	public static void main(String[] args) {
+		person person = new person(1, "Harry", "Potter");
+		student stu = new student(2,  101, "Ron", "Wesley");
+		employee emp = new employee(3, "Hermoney", "Parker", 1001, 50000);
+		person.callname();
+		stu.callname();
+		emp.callname();
+        System.out.println();
+		System.out.println("The id of the person is: "+person.getid()+
+		                   " \nFirst name: "+person.first_name+" \nLast name: "+person.last_name);
+		System.out.println();
+		System.out.println("The id of the person is: "+stu.getid()+" \nroll no: "+stu.rollno+
+		                   " \nFirst name: "+stu.first_name+" \nLast name: "+stu.last_name);
+		System.out.println();
+		System.out.println("The id of the person is: "+emp.getid()+" \nEmp id: "+emp.empid+
+		                   " \nFirst name: "+emp.first_name+" \nLast name: "+emp.last_name+
+		                   " \nSalary: $"+emp.salary);
+
+	}
+}
