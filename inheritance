@@ -66,3 +66,55 @@ public class Main {
 
 	}
 }
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Passing values from one constructor to another:
+
+class person {
+	private int aadhar;
+	private String mobile;
+	String name;
+	String city;
+
+	person(int aadhar, String mobile, String name, String city) {
+		this.aadhar = aadhar;
+		this.mobile = mobile;
+		this.name = name;
+		this.city = city;
+	}
+	
+	person(String mobile, String name, String city) {
+		this.mobile = mobile;
+		this.name = name;
+		this.city = city;
+	}
+	public int getaadhar() {
+		return aadhar;
+	}
+	public String getmobile() {
+		return mobile;
+	}
+}
+
+class company_a extends person {
+	int emp_id;
+	String salary;
+
+	company_a(int id, String mobile, String name, String city, String salary) {
+	    super(mobile, name, city);
+		this.emp_id = id;
+		this.salary = salary;
+		
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		person per = new person(123456, "+91 963258741", "Apple", "Chennai");
+		company_a coma = new company_a(202601, per.getmobile(), per.name, per.city, "42,000");
+		System.out.println("Aadhar no: "+per.getaadhar()+", \nMobile No: "+per.getmobile()+", \nName: "+per.name+", \nCity: "+per.city);
+		System.out.println();
+		System.out.println("Employee id: "+coma.emp_id+", \nMobile No: "+per.getmobile()+", \nName: "+per.name+", \nCity: "+per.city+", \nSalary: IND Rupees "+coma.salary);
+	}
+}
