@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+public class Main
+{
+	static String name = " ";
+	static String city = "";
+	static String mobile = "";
+	static int age;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+        //Name block
+
+		while(true) {
+			
+				System.out.print("Enter your name: ");
+				name = sc.nextLine();
+
+				if(name.matches("[A-Za-z ]+")) {
+					break;
+				}
+			
+			else {
+				System.out.println("Invalid name. Enter alphabets......");
+			}
+		}
+		
+		//City block
+		
+		while(true){
+		    
+		        System.out.print("Enter your City: ");
+		        city = sc.nextLine();
+		        
+		        if(city.matches("Chennai|Bombay|Calcutta|Delhi|Lucknow|Guwhati")) {
+					break;
+				}
+			
+			else {
+				System.out.println("Enter a valid city name!");
+		    }
+		}
+		
+	    //Mobile block	
+		
+        while(true){
+            
+                System.out.print("Enter your Mobile No: +91 ");
+		        mobile = sc.nextLine();
+		        
+		        if(mobile.length()==10 && mobile.matches("[0-9]+")) {
+					break;
+				}
+			
+			else {
+				System.out.println("Enter a valid mobile number!");
+            }
+        }
+        
+        //Age block
+        
+        //while(true){
+           
+                System.out.print("Enter your age: ");
+		        age = sc.nextInt();
+		        sc.nextLine();
+		        
+		        
+        //}
+        System.out.println();
+        System.out.println("------------------------------------------");
+        System.out.println("Your Data: ");
+        System.out.println();
+        System.out.println("Your name: "+name);
+        System.out.println("Your city: "+city);
+        System.out.println("Your Mobile no: "+mobile);
+        
+        if(age>=18 && age<=33) {
+		        System.out.println("Your age: "+age);
+				}
+			
+			else {
+			    System.out.println();
+				System.out.println("Your age is not in the range of 18 - 33. So, you are not eligible as a Teacher");
+			
+            }
+        
+        System.out.println();
+		System.out.println("Thanks you for your response.");
+		sc.close();
+	}
+}
