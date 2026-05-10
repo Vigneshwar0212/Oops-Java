@@ -4,16 +4,16 @@ import java.util.Scanner;
 public class Main{
     public static void main(String[] args){
         ArrayList<String> order = new ArrayList<>();
+        
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the number of foods you would like to order: ");
-        
         int foodsorder = sc.nextInt();
         sc.nextLine();
         
         for (int i = 1; i<=foodsorder; i++){
             String items;
-            while(true){
             
+            while(true){
             System.out.print("Enter the food "+i+" : ");
             items = sc.nextLine();
             
