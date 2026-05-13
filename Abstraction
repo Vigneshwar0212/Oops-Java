@@ -1,0 +1,36 @@
+//Abstraction OOPS
+/*Abstraction contains -> interface (can contain abstact methods, default and final methods), interface methods is implementable 
+                       -> abstract method can only be declared and cannot be implementable */
+
+interface shape{  
+    void circle(); //abstract method (cannot implements value to it)
+    
+    default void rectangle(){   //default method (provide less visiblity than public, mostly used in interface) -> can be implements value like this method (can print values)
+        System.out.println("Rectangle method - default keyword");
+    }
+    static void square(){  /*static method can be accessed any where in the class -> its kind of common (ex: school name, clg exam center) -> can be accessed 
+                                without creating an object -> can be accessed by calling the class name */
+        System.out.println("Square method - static keyword");
+    }
+}
+
+
+public class Main implements shape  //if a class wants to inherit interface -> then implements keyword should be used
+{
+    public void circle(){  /*As it is abstract method declared in the interface, it should be declared in class also for implementation -> declare a public 
+                             keyword to this method as declared as in interface (public in default in interface) */
+        System.out.println("Circle inherited from shape interface");
+    }
+    
+	public static void main(String[] args) {
+	    
+	    Main  obj = new Main();  //creating object -> creating object (new Main()) and declaring a object reference variable (obj)
+	    
+	    obj.rectangle();   // as this method inherits from parent interface -> we can access this method using the objects
+	    obj.circle();
+	    shape.square();  //as a static method declared in parent interface, we can use the class name in which this method is declared as static for accessing the values
+	    
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
