@@ -21,6 +21,10 @@ public class Main implements shape  //if a class wants to inherit interface -> t
                              keyword to this method as declared as in interface (public in default in interface) */
         System.out.println("Circle inherited from shape interface");
     }
+
+	void triangle(){   //we can also create a own method within the class
+        System.out.println("Triangle method - within Main class");
+    }
     
 	public static void main(String[] args) {
 	    
@@ -28,7 +32,9 @@ public class Main implements shape  //if a class wants to inherit interface -> t
 	    
 	    obj.rectangle();   // as this method inherits from parent interface -> we can access this method using the objects
 	    obj.circle();
-	    shape.square();  //as a static method declared in parent interface, we can use the class name in which this method is declared as static for accessing the values
+		obj.triangle();  // we can also access or print the method declared within this class using the object's referance variable
+	    
+		shape.square();  //as a static method declared in parent interface, we can use the class name in which this method is declared as static for accessing the values
 	    
 	}
 }
@@ -56,6 +62,10 @@ public class Main implements shape  //if a class wants to inherit interface -> t
         System.out.println("Circle inherited from shape interface");
     }
     
+    void triangle(){   //we can also create a own method within the class
+        System.out.println("Triangle method - within Main class");
+    }
+    
 	public static void main(String[] args) {
 	    
 	    shape sc = new Main();  /* One of the feature of interface is that we can create a referance variable for interface but we cannot create a object for interface
@@ -64,6 +74,9 @@ public class Main implements shape  //if a class wants to inherit interface -> t
 	    sc.rectangle();   /* as object is created in class and declared interface as referance variable -> we can declare as sc.rectangle()
 	                         if we want to access or print the values of the method.*/
 	    sc.circle();
+	    sc.triangle();  /*even though we had created a object with interface variable as referance -> we cannot able to access the
+	                      individual own method declared in the class using the interface referance variable.*/
+	    
 	    shape.square();  //as a static method declared in parent interface, we can use the class name in which this method is declared as static for accessing the values
 	    
 	}
