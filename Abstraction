@@ -39,7 +39,12 @@ public class Main implements shape  //if a class wants to inherit interface -> t
 		obj.triangle();  // we can also access or print the method declared within this class using the object's referance variable
 	    
 		shape.square();  //as a static method declared in parent interface, we can use the class name in which this method is declared as static for accessing the values
+
+		int sum = obj.length + obj.widgth;  // we can access these variable declared in interface using the object name or by using the interface referance variable
+	    System.out.println(sum);
 	    
+	    int multiple = shape.length * shape.widgth;
+	    System.out.println(multiple);
 	}
 }
 
