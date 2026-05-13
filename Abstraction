@@ -3,6 +3,10 @@
                        -> abstract method can only be declared and cannot be implementable */
 
 interface shape{  
+
+	int length = 10;  //final and static variable in default 
+    int widgth = 20;
+	
     void circle(); //abstract method (cannot implements value to it)
     
     default void rectangle(){   //default method (provide less visiblity than public, mostly used in interface) -> can be implements value like this method (can print values)
@@ -43,6 +47,10 @@ public class Main implements shape  //if a class wants to inherit interface -> t
 // same as the above -> but created a object for a class using interface as a referance variable
 
 interface shape{  
+
+	int length = 10;  //final and static variable in default 
+    int widgth = 20;
+
     void circle(); //abstract method (cannot implements value to it)
     
     default void rectangle(){   //default method (provide less visiblity than public, mostly used in interface) -> can be implements value like this method (can print values)
@@ -78,7 +86,12 @@ public class Main implements shape  //if a class wants to inherit interface -> t
 	                      individual own method declared in the class using the interface referance variable.*/
 	    
 	    shape.square();  //as a static method declared in parent interface, we can use the class name in which this method is declared as static for accessing the values
+
+		int multiple = sc.length * sc.widgth;  //as this variables are declared in interface we can access these variables using interface referance variables
+	    System.out.println(multiple);
 	    
+	    int sum = shape.length + shape.widgth;  //we can also access these variables using the interface name
+	    System.out.println(sum);
 	}
 }
 
