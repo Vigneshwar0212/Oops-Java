@@ -1,3 +1,30 @@
+//Array functionalities in java
+
+package SampleTest;
+
+public class Arraylist {
+
+	public static void main(String[] args) {
+		String[] arr = new String[5];   //we can also create like String str[] = {"a", "b"};
+ 		arr[0]="Hello";
+		arr[1]="welcome";
+		arr[2]="to";
+		arr[3]="java";
+		arr[4]="world";
+		
+		for(String a:arr) {
+			System.out.print(a+" ");	
+		}
+		
+		arr[0] = "Hi";  //updating the array
+		 
+		System.out.println(arr[0]);
+	}
+
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -35,3 +62,5 @@ public class Main{
         sc.close();
     }
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
