@@ -1,0 +1,60 @@
+//Two dimensional array
+
+package SampleTest;
+
+public class Arraylist{
+	public static void main(String[] args) {
+		int a[][] = {
+				{10,20},
+				{30,40},
+				{50,60}};
+		
+		int[][] b = new int[3][2]; //[row (3)= index (2)][column (2) = index (1)] -> it is another approach to create a 2 dimensional array
+		
+		b[0][0] = 70;
+		b[0][1] = 80;
+		
+		b[1][0] = 90;
+		b[1][1] = 100;
+		
+		b[2][0] = 110;
+		b[2][1] = 120;
+		
+		System.out.println(a[0][1]);  //[row] [column] -> output = 20
+		System.out.println(a.length);  //return the number of rows -> output = 3
+		System.out.println(a[1].length);  //return the number of column in a specified row of index [1] -> output = 2
+		
+		System.out.println();
+		
+		System.out.println(b[1][1]);  //[row] [column] -> output = 100
+		System.out.println(b.length);  //return the number of rows -> output = 3
+		System.out.println(b[2].length);  //return the number of column in a specified row of index [2] -> output = 2
+		
+		System.out.println();
+		//loop for printing a[][] two dimensional array
+		for (int i=0; i<a.length; i++) {  // this loop is for row
+			for (int j=0; j<a[i].length; j++) {  // this loop is for column -> as column is same for the entire rows -> we use j<a[i].length
+				System.out.print(a[i][j]+" ");
+			}
+			System.out.println(); // leaves space for every iteration
+			/* output for this loop statement
+			   10 20 
+			   30 40 
+			   50 60  */
+		}
+		System.out.println();
+		//loop for printing b[][] two dimensional array
+		for (int arr[]:b) {  //the values of 2 dimensional array will be stored as single dimensional array in arr[] variable
+			for(int x:arr) {  //this arr will now be stored in the variable x for printing the values of array
+				System.out.print(x+" "); //the values of 1st row will be printed in the 1st iteration, then 2nd row values and so on..
+			}
+			System.out.println();  //print space for each iteration
+		}/* output for this loop statement
+			70 80 
+			90 100 
+			110 120 
+		*/
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
