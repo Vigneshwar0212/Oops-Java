@@ -192,6 +192,9 @@ public class Arraylist implements I1, I2 {  // A class can implements multiple i
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Class extends only one class, but implements multiple interface
+//Class → Class	          extends
+  Class → Interface	      implements
+  Interface → Interface	  extends
 
 package SampleTest;
 
