@@ -1,3 +1,29 @@
+//Hetrogenous array which store multiple values of different data types
+//Object array
+
+package SampleTest;
+
+public class Arraylist{
+	public static void main(String[] args) {
+			Object a[] = {1,"one", 'A', 9876543219L, 25.69845675, 35.4586F};  
+			//Object contains all the predefined data types -> if array contains values of multiple data types we use Object as a data type
+			for(Object x:a) {
+				System.out.println(x);
+			}
+	}
+}
+/* output
+ 
+ 1
+one
+A
+9876543219
+25.69845675
+35.4586
+
+*/
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Array functionalities in java
 
 package SampleTest;
