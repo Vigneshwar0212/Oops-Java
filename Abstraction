@@ -155,3 +155,39 @@ public class Arraylist implements shape{
 }
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//multiple interfaces 
+
+package SampleTest;
+
+interface I1 {    //Interface 2
+
+	int length = 10;
+
+	void m1();   //abstract method
+
+}
+
+interface I2 {    //Interface 2
+	int breadth = 22;
+
+	void m2();   //abstract method
+}
+
+public class Arraylist implements I1, I2 {  // A class can implements multiple interfaces using implements keyword
+
+	public void m1() {
+		System.out.println("I got the length");
+	}
+
+	public void m2() {
+		System.out.println("I got the breadth");
+	}
+	
+	public static void main(String[] args) {
+		Arraylist arr = new Arraylist();   //Object creation with arr as a referance variable
+	    int sum = arr.length +arr.breadth;
+	    System.out.println(sum);
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
