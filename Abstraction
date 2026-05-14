@@ -191,3 +191,50 @@ public class Arraylist implements I1, I2 {  // A class can implements multiple i
 }
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Class extends only one class, but implements multiple interface
+
+package SampleTest;
+
+interface I1 {    //Interface 2
+
+	int length = 10;
+
+	void m1();   //abstract method
+
+}
+
+interface I2 {    //Interface 2
+	int breadth = 22;
+
+	void m2();   //abstract method
+}
+
+class sample{
+	int a = 5;
+	int b = 10;
+	
+	void multiplication() {
+		int multiple = a*b;
+		System.out.println("Sample Class method - multiply a*b: "+multiple);
+	}
+}
+
+public class Arraylist extends sample implements I1, I2 {  // A class can implements multiple interfaces using implements keyword
+                      // But a class can extends only one class -> inheritance which needs to be in the order of extends and then implements
+	public void m1() {
+		System.out.println("I got the length");
+	}
+
+	public void m2() {
+		System.out.println("I got the breadth");
+	}
+	
+	public static void main(String[] args) {
+		Arraylist arr = new Arraylist();   //Object creation with arr as a referance variable
+	    int sum = arr.length +arr.breadth;  // I1 and I2 interface methods
+	    System.out.println(sum);
+	    arr.multiplication();  //sample class method
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
