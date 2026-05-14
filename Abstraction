@@ -101,3 +101,57 @@ public class Main implements shape  //if a class wants to inherit interface -> t
 }
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//eclipse code
+
+package SampleTest;
+
+interface shape{
+	int length = 100;
+	int widgth = 156;
+	int radius = 7;
+	int side = 17;
+	
+	void circle();
+	
+	static void square() {
+		int area = side*side;
+		System.out.println("square with static keyword - area: "+area);
+	}
+	
+	default void rectangle() {
+		int area = length*widgth;
+		System.out.println("rectangle with default keyword");
+	}
+}
+
+
+public class Arraylist implements shape{
+	
+	int base = 15;
+	int heigth = 8;
+	
+	public void circle() {
+		int area = (22*radius*radius)/7;
+		System.out.println("Circle within class uses public keyword - area: "+area);
+	}
+	
+	public void triangle() {
+		int area = (1*base*heigth)/2;
+		System.out.println("Triangle with public keyword - area: "+area);
+	}
+	
+	public static void main(String[] args) {
+		
+		Arraylist arr = new Arraylist();
+		shape sc = new Arraylist();
+		
+		arr.circle();
+		arr.triangle();
+		
+		sc.rectangle();
+		shape.square();
+		
+	}
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
