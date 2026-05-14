@@ -118,3 +118,99 @@ public class Main {
 		System.out.println("Employee id: "+coma.emp_id+", \nMobile No: "+per.getmobile()+", \nName: "+per.name+", \nCity: "+per.city+", \nSalary: IND Rupees "+coma.salary);
 	}
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//eclipse code
+
+package SampleTest;
+public class Arraylist{   //class 1
+	String god;
+	String city;
+	String State;
+	int year;
+	
+	public void getgod() {
+		System.out.println("Shivan");
+	}
+	public void getcity() {
+		System.out.println("Thiruvanaamalai");
+	}
+	public void getstate() {
+		System.out.println("Tamil Nadu");
+	}
+	public void getyear() {
+		System.out.println("700 BC");
+	}
+	
+}
+
+
+public class Vishnu extends Arraylist{   //class 2
+	
+	public void getgod() {
+		System.out.println("Venkateshwara Perumal");
+	}
+	
+	public void getcity() {
+		System.out.println("Tirupati");
+	}
+	public void getstate() {
+		System.out.println("Andhra Pradesh");
+	}
+	public void getyear() {
+		System.out.println("500 BC");
+	}
+}
+
+
+public class Godness extends Vishnu {    //class 3
+	
+	public void getgod() {
+		System.out.println("Amman");
+	}
+	
+	public void getcity() {
+		System.out.println("Varanasi");
+	}
+	public void getstate() {
+		System.out.println("Uttar Pradesh");
+	}
+	public void getyear() {
+		System.out.println("120 BC");
+	}
+}
+
+
+public class Location extends Godness{    //class 4 -final
+
+	public static void main(String[] args) {
+		
+		Arraylist arr = new Arraylist();
+		Vishnu vis = new Vishnu();
+		Godness god = new Godness();
+		
+		System.out.println("The temple and gods details are follows........");
+		System.out.println();
+		
+		god.getgod();
+		god.getcity();
+		god.getstate();
+		god.getyear();
+		System.out.println();
+		
+		vis.getcity();
+		vis.getgod();
+		vis.getstate();
+		vis.getyear();
+		System.out.println();
+		
+		arr.getgod();
+		arr.getstate();
+		arr.getcity();
+		arr.getyear();
+
+	}
+
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
