@@ -32,7 +32,7 @@ public class Main{
 package SampleTest;
 
 public class Arraylist {
-	static String sch_name = "High School";
+	static String sch_name = "High School";  //can be accessed throughout the program within the class like +static_variable;
 	private int id;
 	private String city;
 	String name;
