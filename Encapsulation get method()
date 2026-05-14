@@ -25,3 +25,53 @@ public class Main{
         "\nName of the student: "+stu.name+"\nStandard studying: "+stu.standard);
 }
 }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//eclipse program
+
+package SampleTest;
+
+public class Arraylist {
+	static String sch_name = "High School";
+	private int id;
+	private String city;
+	String name;
+	String standard;
+	long ph;
+	
+	Arraylist (int id, String name, String standard, long ph, String city){
+	this.id = id;
+	this.city = city;
+	this.name = name;
+	this.standard = standard;
+	this.ph = ph;
+	}
+	
+	public int getid() {
+		return id;
+		}
+	public String getcity() {
+		return city;
+	}
+	public String getname() {
+		return name;
+	}
+	public String getstandard() {
+		return standard;
+	}
+	public long getph() {  //need to mention L at the end of the value to trigger it as a long value, if not then java treats it like int
+		return ph;
+	}
+	
+	public static void main(String[] args) {
+		Arraylist arr = new Arraylist(101, "Apple", "X 'B'", 9795949621L, "Chennai"); 
+		System.out.println("School name is: "+sch_name);
+		System.out.println("Student name: "+arr.getname()+",\nID: "+arr.getid()+",\nStandard: "+arr.getstandard()+",\nPhone: "+arr.getph()
+		+",\nCity: "+arr.getcity());
+		
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
