@@ -25,6 +25,43 @@ public class Arraylist {
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Arraylist functionalities
+
+package SampleTest;
+
+import java.util.ArrayList;
+
+public class Arraylist {
+
+	public static void main(String[] args) {
+
+		ArrayList<Integer> arr = new ArrayList<>();
+		
+		arr.add(10);  //adding values to the arraylist
+		arr.add(20);
+		arr.add(30);
+		arr.add(40);
+		
+		System.out.println(arr);  //printing the values of Arraylist
+		System.out.println("Before updating the index value (2) in arraylist: "+arr.get(2));  //printing the value by specifying the index
+		
+		arr.set(2, 33); //updating the arraylist by changing the values by specifying the index/
+		System.out.println("After updating the index value (2) in arraylist: "+arr.get(2));
+		
+		arr.remove(3);  //deleting an element in arraylist
+		System.out.println(arr);
+		
+		System.out.println(arr.contains(33)); //verifying whether the arraylist contains the value specified in the contains method  -> return boolean
+		System.out.println(arr.size());  //printing the size of the arraylist -> values will be printed in index total
+		
+		arr.clear();  //Deletes entire arraylist
+		System.out.println(arr);
+	}
+
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.ArrayList;
 import java.util.Scanner;
 
