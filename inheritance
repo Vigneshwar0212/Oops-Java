@@ -214,3 +214,82 @@ public class Location extends Godness{    //class 4 -final
 }
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//super keyword inheritance using eclipse
+
+package SampleTest;
+
+class person {   //class 1
+	int id;
+	String name;
+	String city;
+	long ph;
+
+	person(int id, String name, String city, long ph) {
+		this.id = id;
+		this.name = name;
+		this.city = city;
+		this.ph = ph;
+	}
+
+	person(String name, String city, long ph) {
+		this.name = name;
+		this.city = city;
+		this.ph = ph;
+	}
+
+	public int getid() {
+		return id;
+	}
+
+	public String getname() {
+		return name;
+	}
+
+	public String getcity() {
+		return city;
+	}
+
+	public long getph() {
+		return ph;
+	}
+}
+
+
+class employee extends person {  //class 2
+	int empid;
+	int salary;
+	String company;
+
+	employee(int empid, String name, String city, long ph, String company, int salary) {
+		super(name, city, ph);
+		this.empid = empid;
+		this.company = company;
+		this.salary = salary;
+	}
+	public int getempid() {
+		return empid;
+	}
+	public int getsalary() {
+		return salary;
+	}
+	public String getcompany() {
+		return company;
+	}
+}
+
+public class Arraylist extends employee {          //class 3
+	Arraylist(int empid, String name, String city, long ph, String company, int salary) { /*explicit constructor is not necessary , but it can also be 
+		                                               declared for better program flow */
+		super(empid, name, city, ph, company, salary);
+		}
+
+	public static void main(String[] args) {
+		person per = new person(101, "Apple", "Chennai", 9856985689L);
+		employee emp = new employee(2026002, per.getname(), per.getcity(), per.getph(), "ABC company", 55000);
+		
+		System.out.println("Identity id: "+per.getid()+",\nName: "+per.getname()+",\nEmployee id: "+emp.getempid()+",\nCompany name: "+emp.getcompany()
+		+",\nSalary: "+emp.getsalary()+",\nPhone no: "+per.getph()+",\nCity: "+per.getcity());
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
