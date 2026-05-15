@@ -1,3 +1,24 @@
+//using Object as a data type in Scanner
+
+package SampleTest;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Arraylist {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter a unknow data type value: ");  //input = asdga4543 -> sfdab -> 20.58971522
+		Object ob = sc.next();  //Object can accept any data types -> as we use next(), it will convert the entered value to String -> as next() is applicable only for String values
+		
+		System.out.println("can accept any value as input: "+ob);//output = asdga4543 -> sfdab -> 20.58971522
+		
+		
+}
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import java.util.Scanner;
 
 public class Main
